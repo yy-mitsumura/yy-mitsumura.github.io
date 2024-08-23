@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+            input{
+                font-size: 200%;
+                width: 30%;
+            }
+            button{
+                font-size: 200%;
+            }
+        </style>
+    </head>
+<body>
+    <button id="batu">×</button> <input type="text" id="one"> × ルート2 = <input type="text" id="two">
+    <script>
+        const one=document.getElementById("one");
+        const two=document.getElementById("two");
+        one.addEventListener("input", function(){
+            const one=document.getElementById("one");
+            const two=document.getElementById("two");
+            const Fone=parseFloat(one.value)
+            two.value=(Fone*Math.sqrt(2)).toFixed(2);
+        })
+        const batu=document.getElementById("batu");
+        batu.addEventListener("click",function(){one.value="";two.value="";})
+    </script>
+</body>
+    </html>
